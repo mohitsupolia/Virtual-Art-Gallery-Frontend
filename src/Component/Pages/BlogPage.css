@@ -1,0 +1,30 @@
+.blog-page {
+    background-color: black;
+    color: white;
+    padding: 20px;
+  }
+  
+  .blog-posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .blog-post {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+  
+  .blog-post h2 {
+    color: yellowgreen; /* Heading color */
+  }
+  
+  .blog-post p {
+    margin-top: 10px;
+  }
+  
+  .blog-post img {
+    width: 100%;
+    height: auto;
+  }
+  
