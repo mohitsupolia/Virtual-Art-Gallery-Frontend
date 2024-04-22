@@ -1,5 +1,4 @@
 import React from "react";
-import "./BlogPage.css"; // Import CSS file for styling
 
 const BlogPage = () => {
   // Sample blog post data
@@ -36,15 +35,13 @@ const BlogPage = () => {
   ];
 
   return (
-    <div className="blog-page">
-      <h1 className="font-bold text-3xl">
-        <center>BLOGS</center>
-      </h1>
-      <div className="blog-posts">
+    <div className="bg-black text-white p-8">
+      <h1 className="font-bold text-3xl text-center mb-8">BLOGS</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {blogPosts.map((post) => (
-          <div key={post.id} className="blog-post">
-            <h2>{post.title}</h2>
-            <img src={post.imageUrl} alt={post.title} />
+          <div key={post.id}>
+            <h2 className="border-2 border-customGreen font-bold text-lg mb-4 text-center">{post.title}</h2>
+            <img src={post.imageUrl} alt={post.title} className="w-full mb-4" />
             <p>{post.content}</p>
           </div>
         ))}
@@ -54,3 +51,4 @@ const BlogPage = () => {
 };
 
 export default BlogPage;
+

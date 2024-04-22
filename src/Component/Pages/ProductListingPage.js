@@ -1,6 +1,5 @@
 import React from "react";
 import ProductCard from "./ProductCard";
-import "./ProductListingPage.css";
 
 const ProductListingPage = () => {
   // Dummy product data
@@ -58,14 +57,9 @@ const ProductListingPage = () => {
   ];
 
   return (
-    <div>
-      <h1
-        style={{ color: "white", textAlign: "center" }}
-        className="text-3xl m-2 font-bold"
-      >
-        Products
-      </h1>
-      <div className="product-container">
+    <div className="bg-black">
+      <h1 className="text-white text-3xl font-bold text-center py-4">Products</h1>
+      <div className="flex flex-wrap justify-center">
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
@@ -75,3 +69,4 @@ const ProductListingPage = () => {
 };
 
 export default ProductListingPage;
+

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './Footer.css'; // Import CSS file for styling
 
 const ContactUs = () => {
     const [formData, setFormData] = useState({
@@ -23,34 +22,31 @@ const ContactUs = () => {
     };
 
     return (
-        <footer className="footer">
+        <footer className="bg-black text-white p-8">
             <div className="contact-us">
-                <h3>CONTACT US</h3>
+                <h3 className="text-2xl mb-4">CONTACT US</h3>
                 <form onSubmit={handleSubmit}>
-                    <div className="form-row">
-                        {/* <label htmlFor="name">Name:</label> */}
-                        <input type="text" id="name" name="name" value={formData.name} placeholder="Enter your Name:" onChange={handleChange} required />
+                    <div className="mb-4">
+                        <input type="text" name="name" value={formData.name} placeholder="Enter your Name:" onChange={handleChange} className="w-full p-2 border-2 border-customGreen rounded bg-black placeholder-white text-white" required />
                     </div>
-                    <div className="form-row">
-                        {/* <label htmlFor="email">Email Address:</label> */}
-                        <input type="email" id="email" name="email" value={formData.email} placeholder='Enter your Email Address:' onChange={handleChange} required />
+                    <div className="mb-4">
+                        <input type="email" name="email" value={formData.email} placeholder="Enter your Email Address:" onChange={handleChange} className="w-full p-2 border-2 border-customGreen rounded bg-black placeholder-white text-white" required />
                     </div>
-                    <div className="form-row">
-                        {/* <label htmlFor="mobile">Mobile Number:</label> */}
-                        <input type="tel" id="mobile" name="mobile" value={formData.mobile} placeholder='Enter your Mobile Number:' onChange={handleChange} required />
+                    <div className="mb-4">
+                        <input type="tel" name="mobile" value={formData.mobile} placeholder="Enter your Mobile Number:" onChange={handleChange} className="w-full p-2 border-2 border-customGreen rounded bg-black placeholder-white text-white" required />
                     </div>
-                    <div className="form-row">
-                        {/* <label htmlFor="message">Message:</label> */}
-                        <textarea id="message" name="message" rows="4" value={formData.message} placeholder='Ask me your Doubts:' onChange={handleChange} required></textarea>
+                    <div className="mb-4">
+                        <textarea name="message" rows="4" value={formData.message} placeholder="Ask me your Doubts:" onChange={handleChange} className="w-full p-2 border-2 border-customGreen rounded bg-black placeholder-white text-white" required></textarea>
                     </div>
-                    <button type="submit">Submit</button>
+                    <button type="submit" className="bg-customGreen hover:bg-white hover:text-black text-black py-2 px-4 rounded transition-colors duration-300">Submit</button>
                 </form>
             </div>
             <div>
-            <p className='copy_right'>@CoppyRight 2024</p>
+                <p className="text-center">@CoppyRight 2024</p>
             </div>
         </footer>
     );
 };
 
 export default ContactUs;
+

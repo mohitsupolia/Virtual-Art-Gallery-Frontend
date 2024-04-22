@@ -17,7 +17,7 @@ const Navbar = () => {
   const name = getGlobalName();
   console.log("hi", name);
   return (
-    <nav className="bg-slate-950">
+    <nav className="bg-black">
       <div className="flex items-center justify-between px-4 py-3">
         <div className="text-white font-bold w-20">
           <img src="./images/logo.png" alt="logo" />

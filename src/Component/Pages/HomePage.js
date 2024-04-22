@@ -111,7 +111,7 @@ export default function HomePage() {
   );
 
   return (
-    <div className="bg-slate-950">
+    <div className="bg-black">
       <div className="text-customGreen text-center py-10">
         <h1 className="animate-marquee text-5xl font-bold">
           Journey Through The World Of Art
@@ -128,7 +128,7 @@ export default function HomePage() {
           placeholder="Search by designer name..."
           value={searchQuery}
           onChange={handleSearchChange}
-          className="mb-6 p-2 border border-gray-300 rounded-full w-full sm:w-1/2"
+          className="w-full p-3 border-2 border-customGreen rounded bg-black placeholder-white text-white mb-4"
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
